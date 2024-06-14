@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Enter movie Name" onchange={nameHandler}></lightning-input>
+                <ul>
+                <template for:each={movies} for:item="movie">
+                    <lightning-tile key={movie.imdbID} >
+                        <li  >
+                            {movie.Title}
+                        </li>
+                    </lightning-tile>
+                     
+                </template>
+            </ul>
+    </lightning-card>
+</template>
